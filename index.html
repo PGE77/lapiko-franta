@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href=" https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+
+  <body>
+    <header
+      class="flex shadow-lg py-4 px-4 xl:pl-10 xl:pr-10 bg-white font-serif min-h-24 tracking-wide relative z-50 items-center justify-between"
+    >
+      <div class="flex items-center gap-3.5 xl:pr-10">
+        <a
+          href="javascript:void(0)"
+          class="uppercase max-xl:hidden invisible hover:text-blue text-blue block font-semibold text-md tracking-wider"
+        >
+          <img class="w-6" src="./img/linkedin.png" alt="Linkedin" />
+        </a>
+        <a
+          href="javascript:void(0)"
+          class="uppercase max-xl:hidden invisible hover:text-blue text-blue block font-semibold text-md tracking-wider"
+        >
+          <img class="w-6" src="./img/instagram.png" alt="Instagram" />
+        </a>
+      </div>
+      <div class="container-menu">
+        <a
+          href="/"
+          class="lg:absolute max-lg:left-10 lg:top-2/4 lg:left-2/4 lg:-translate-x-1/2 lg:-translate-y-1/2"
+        >
+          <img src="./img/logo.png" alt="logo" class="w-64 max-lg:w-36" />
+        </a>
+
+        <div
+          id="collapseMenu"
+          class="max-lg:hidden lg:!block max-lg:w-full max-lg:fixed max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50"
+        >
+          <button
+            id="toggleClose"
+            class="lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white w-9 h-9 flex items-center justify-center border"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-3.5 h-3.5 fill-black"
+              viewBox="0 0 320.591 320.591"
+            >
+              <path
+                d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                data-original="#000000"
+              ></path>
+              <path
+                d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                data-original="#000000"
+              ></path>
+            </svg>
+          </button>
+
+          <ul
+            class="lg:flex lg:gap-x-3.5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 min-w-300 max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50"
+          >
+            <li class="mb-6 hidden max-lg:block">
+              <a href="javascript:void(0)">
+                <img src="./img/logo.png" alt="logo" class="w-36 max-lg:w-36" />
+              </a>
+            </li>
+            <li class="max-lg:border-b max-lg:py-3 px-3 block">
+              <a
+                href="javascript:void(0)"
+                class="uppercase hover:text-blue text-blue block font-semibold text-md tracking-wider"
+              >
+                O nás
+              </a>
+            </li>
+            <li class="max-lg:border-b max-lg:py-3 px-3 block">
+              <a
+                href="javascript:void(0)"
+                class="uppercase hover:text-blue text-black block font-semibold text-md tracking-wider"
+              >
+                Služby
+              </a>
+            </li>
+            <li class="max-lg:border-b max-lg:py-3 px-3 block">
+              <a
+                href="javascript:void(0)"
+                class="uppercase hover:text-blue text-black block font-semibold text-md tracking-wider"
+              >
+                Případové studie
+              </a>
+            </li>
+            <li class="max-lg:border-b max-lg:py-3 px-3 hidden max-lg:block">
+              <a
+                href="javascript:void(0)"
+                class="uppercase hover:text-blue text-black block font-semibold text-md tracking-wider"
+              >
+                Kurzy a mentoring
+              </a>
+            </li>
+            <li class="max-lg:border-b max-lg:py-3 px-3 hidden max-lg:block">
+              <a
+                href="javascript:void(0)"
+                class="uppercase hover:text-blue text-black block font-semibold text-md tracking-wider"
+              >
+                Kontakt
+              </a>
+            </li>
+            <li class="max-lg:border-b max-lg:py-3 px-3 hidden max-lg:block">
+              <a
+                href="javascript:void(0)"
+                class="uppercase hover:text-blue text-black block font-semibold text-md tracking-wider"
+              >
+                ENG
+              </a>
+            </li>
+            <li class="flex gap-1.5 items-center mt-5">
+              <a
+                href="javascript:void(0)"
+                class="uppercase hidden max-lg:block font-semibold text-md tracking-wider"
+              >
+                <img class="w-6" src="./img/linkedin.png" alt="Linkedin" />
+              </a>
+              <a
+                href="javascript:void(0)"
+                class="uppercase hidden max-lg:block font-semibold text-md tracking-wider"
+              >
+                <img class="w-6" src="./img/instagram.png" alt="Instagram" />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex items-center ml-auto space-x-6">
+          <ul
+            class="hidden lg:flex lg:gap-x-3.5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 min-w-300 max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50"
+          >
+            <li class="mb-6 hidden max-lg:block">
+              <a href="javascript:void(0)">
+                <img src="./img/logo.png" alt="logo" class="w-36 max-lg:w-36" />
+              </a>
+            </li>
+            <li class="max-lg:border-b max-lg:py-3 px-3 hidden">
+              <a
+                href="javascript:void(0)"
+                class="uppercase hover:text-blue text-black block font-semibold text-md tracking-wider"
+              >
+                O nás
+              </a>
+            </li>
+            <li class="max-lg:border-b max-lg:py-3 px-3 hidden">
+              <a
+                href="javascript:void(0)"
+                class="uppercase hover:text-blue text-black block font-semibold text-md tracking-wider"
+              >
+                Služby
+              </a>
+            </li>
+            <li class="max-lg:border-b max-lg:py-3 px-3 hidden">
+              <a
+                href="javascript:void(0)"
+                class="uppercase hover:text-blue text-black block font-semibold text-md tracking-wider"
+              >
+                Případové studie
+              </a>
+            </li>
+            <li class="max-lg:border-b max-lg:py-3 px-3">
+              <a
+                href="javascript:void(0)"
+                class="uppercase hover:text-blue text-black block font-semibold text-md tracking-wider"
+              >
+                Kurzy a mentoring
+              </a>
+            </li>
+            <li class="max-lg:border-b max-lg:py-3 px-3">
+              <a
+                href="javascript:void(0)"
+                class="uppercase hover:text-blue text-black block font-semibold text-md tracking-wider"
+              >
+                Kontakt
+              </a>
+            </li>
+            <li
+              class="max-lg:border-b max-lg:py-3 pl-8 border-l-2 border-black"
+            >
+              <a
+                href="javascript:void(0)"
+                class="uppercase hover:text-blue text-black block font-semibold text-md tracking-wider"
+              >
+                ENG
+              </a>
+            </li>
+          </ul>
+
+          <button id="toggleOpen" class="lg:hidden">
+            <svg
+              class="w-7 h-7"
+              fill="#333"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="flex items-center gap-3.5 xl:pl-10">
+        <a
+          href="javascript:void(0)"
+          class="uppercase max-xl:hidden hover:text-blue text-blue block font-semibold text-md tracking-wider"
+        >
+          <img class="w-6" src="./img/linkedin.png" alt="Linkedin" />
+        </a>
+        <a
+          href="javascript:void(0)"
+          class="uppercase max-xl:hidden hover:text-blue text-blue block font-semibold text-md tracking-wider"
+        >
+          <img class="w-6" src="./img/instagram.png" alt="Instagram" />
+        </a>
+      </div>
+    </header>
+
+    <section class="relative h-screen-90 text-white flex items-center">
+      <div
+        class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden"
+      >
+        <video
+          class="min-w-full min-h-full absolute object-cover"
+          src="https://vpinedabucket.s3.amazonaws.com/video.mov"
+          type="video/mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+        <div
+          class="absolute block left-0 right-0 top-0 bottom-0 min-w-full min-h-full bg-black/50 z-10"
+        ></div>
+      </div>
+      <div class="container-cover overflow-hidden relative z-10">
+        <div class="max-lg:w-full w-1/2">
+          <h1
+            class="text-3xl uppercase font-bold tracking-wider max-lg:text-xl"
+          >
+            Pomáháme vašim značkám
+            <br class="max-lg:hidden" />
+            Dominovat na sociálních sítích od A do Z
+          </h1>
+          <br />
+          <h2
+            class="text-3xl uppercase font-bold tracking-wider mb-3 max-lg:text-xl"
+          >
+            Stačí začít s námi
+          </h2>
+          <p
+            class="text-white text-1xl max-w-lg tracking-wider leading-7 max-lg:text-base"
+          >
+            Dáváme nápadům život a značkám šmrnc.
+            <br class="max-lg:hidden" />
+            Jsme full-service agentura, která vám zajistí
+            <br class="max-lg:hidden" />
+            marketing i videoprodukci od A do Z.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-5">
+            <a
+              class="bg-white uppercase leading-7 w-48 text-center tracking-wide text-black hover:bg-blue hover:text-white focus:bg-blue focus:text-white max-lg:px-4 max-lg:py-2 px-4 py-4 rounded-lg"
+              href="/"
+            >
+              Naše služby
+            </a>
+            <a
+              class="bg-white uppercase leading-7 w-48 text-center tracking-wide text-black hover:bg-blue hover:text-white focus:bg-blue focus:text-white max-lg:px-4 max-lg:py-2 px-4 py-4 rounded-lg"
+              href="/"
+            >
+              Konzultace zdarma
+            </a>
+          </div>
+          <div class="flex gap-1 mt-2">
+            <img class="w-6" src="./img/star.png" alt="Hvězda" />
+            <img class="w-6" src="./img/star.png" alt="Hvězda" />
+            <img class="w-6" src="./img/star.png" alt="Hvězda" />
+            <img class="w-6" src="./img/star.png" alt="Hvězda" />
+            <img class="w-6" src="./img/star.png" alt="Hvězda" />
+          </div>
+        </div>
+        <div class="max-lg:w-full w-1/2 relative h-full">
+          <div class="absolute pikora">
+            <img
+              class="pikoraImg"
+              src="./img/pikola.png"
+              alt="Před Pikolou za Pikolou.. "
+            />
+            <span
+              class="text-white relative max-sm:bottom-96 bottom-20 right-28 max-sm:right-8 text-1xl"
+            >
+              Pavel Pikola
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main>
+      <section class="py-14 max-sm:py-7">
+        <div class="container">
+          <!-- Slider main container -->
+          <div class="swiper overflow-hidden">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img
+                  class="grayscale hover:grayscale-0"
+                  src="./img/nutrend.png"
+                  alt="Nutrend"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="grayscale hover:grayscale-0"
+                  src="./img/nutrend.png"
+                  alt="Nutrend"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="grayscale hover:grayscale-0"
+                  src="./img/nutrend.png"
+                  alt="Nutrend"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="grayscale hover:grayscale-0"
+                  src="./img/nutrend.png"
+                  alt="Nutrend"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="grayscale hover:grayscale-0"
+                  src="./img/nutrend.png"
+                  alt="Nutrend"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="grayscale hover:grayscale-0"
+                  src="./img/nutrend.png"
+                  alt="Nutrend"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="grayscale hover:grayscale-0"
+                  src="./img/nutrend.png"
+                  alt="Nutrend"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="grayscale hover:grayscale-0"
+                  src="./img/nutrend.png"
+                  alt="Nutrend"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="grayscale hover:grayscale-0"
+                  src="./img/nutrend.png"
+                  alt="Nutrend"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="grayscale hover:grayscale-0"
+                  src="./img/nutrend.png"
+                  alt="Nutrend"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pt-8 pb-8 max-sm:pt-0">
+        <div class="container">
+          <div
+            class="grid grid-flow-row auto-rows-min grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-28 max-lg:gap-3.5"
+          >
+            <article
+              class="group flex flex-col items-center justify-between px-8 py-8 cursor-pointer bg-white hover:bg-gradientPurple focus:bg-gradientPurple"
+            >
+              <h2
+                class="text-black text-center text-2xl leading-7 tracking-wide mb-3.5 uppercase font-bold group-hover:text-white group-focus:text-white"
+              >
+                Marketingová strategie
+              </h2>
+              <p
+                class="text-base text-center text-black leading-7 tracking-wide mb-6 group-hover:text-white group-focus:text-white"
+              >
+                Na základě dat a výzkum u vytvoříme strategii, která vás posune
+                dál – ať už při budování značky nebo zvyšování prodejů. Váš
+                úspěch začíná u nás!
+              </p>
+              <a
+                class="bg-black text-sm text-white hover:bg-blue focus:bg-blue rounded-lg uppercase px-8 py-2"
+                href="/"
+              >
+                Více info
+              </a>
+            </article>
+            <article
+              class="group flex flex-col items-center justify-between px-8 py-8 cursor-pointer bg-white hover:bg-gradientPurple focus:bg-gradientPurple"
+            >
+              <h2
+                class="text-black text-center text-2xl leading-7 tracking-wide mb-3.5 uppercase font-bold group-hover:text-white group-focus:text-white"
+              >
+                Marketingová strategie
+              </h2>
+              <p
+                class="text-base text-center text-black leading-7 tracking-wide mb-6 group-hover:text-white group-focus:text-white"
+              >
+                Na základě dat a výzkum u vytvoříme strategii, která vás posune
+                dál – ať už při budování značky nebo zvyšování
+              </p>
+              <a
+                class="bg-black text-sm text-white hover:bg-blue focus:bg-blue rounded-lg uppercase px-8 py-2"
+                href="/"
+              >
+                Více info
+              </a>
+            </article>
+            <article
+              class="group flex flex-col items-center justify-between px-8 py-8 cursor-pointer bg-white hover:bg-gradientPurple focus:bg-gradientPurple"
+            >
+              <h2
+                class="text-black text-center text-2xl leading-7 tracking-wide mb-3.5 uppercase font-bold group-hover:text-white group-focus:text-white"
+              >
+                Marketingová
+              </h2>
+              <p
+                class="text-base text-center text-black leading-7 tracking-wide mb-6 group-hover:text-white group-focus:text-white"
+              >
+                Na základě dat a výzkum u vytvoříme strategii, která vás posune
+                dál – ať už při budování značky nebo zvyšování prodejů. Váš
+                úspěch začíná u nás!
+              </p>
+              <a
+                class="bg-black text-sm text-white hover:bg-blue focus:bg-blue rounded-lg uppercase px-8 py-2"
+                href="/"
+              >
+                Více info
+              </a>
+            </article>
+            <article
+              class="group flex flex-col items-center justify-between px-8 py-8 cursor-pointer bg-white hover:bg-gradientPurple focus:bg-gradientPurple"
+            >
+              <h2
+                class="text-black text-center text-2xl leading-7 tracking-wide mb-3.5 uppercase font-bold group-hover:text-white group-focus:text-white"
+              >
+                Marketingová strategie
+              </h2>
+              <p
+                class="text-base text-center text-black leading-7 tracking-wide mb-6 group-hover:text-white group-focus:text-white"
+              >
+                Na základě dat a výzkum u vytvoříme strategii, která vás posune
+                dál – ať už při budování značky nebo zvyšování prodejů. Váš
+                úspěch začíná u nás!
+              </p>
+              <a
+                class="bg-black text-sm text-white hover:bg-blue focus:bg-blue rounded-lg uppercase px-8 py-2"
+                href="/"
+              >
+                Více info
+              </a>
+            </article>
+            <article
+              class="group flex flex-col items-center justify-between px-8 py-8 cursor-pointer bg-white hover:bg-gradientPurple focus:bg-gradientPurple"
+            >
+              <h2
+                class="text-black text-center text-2xl leading-7 tracking-wide mb-3.5 uppercase font-bold group-hover:text-white group-focus:text-white"
+              >
+                Marketingová
+              </h2>
+              <p
+                class="text-base text-center text-black leading-7 tracking-wide mb-6 group-hover:text-white group-focus:text-white"
+              >
+                Na základě dat a výzkum u vytvoříme strategii, která vás posune
+                dál – ať už při budování značky nebo zvyšování prodejů.
+              </p>
+              <a
+                class="bg-black text-sm text-white hover:bg-blue focus:bg-blue rounded-lg uppercase px-8 py-2"
+                href="/"
+              >
+                Více info
+              </a>
+            </article>
+            <article
+              class="group flex flex-col items-center justify-between px-8 py-8 cursor-pointer bg-white hover:bg-gradientPurple focus:bg-gradientPurple"
+            >
+              <h2
+                class="text-black text-center text-2xl leading-7 tracking-wide mb-3.5 uppercase font-bold group-hover:text-white group-focus:text-white"
+              >
+                Marketingová strategie
+              </h2>
+              <p
+                class="text-base text-center text-black leading-7 tracking-wide mb-6 group-hover:text-white group-focus:text-white"
+              >
+                Na základě dat a výzkum u vytvoříme strategii, která vás posune
+                dál – ať už při budování značky nebo zvyšování prodejů. Váš
+                úspěch začíná u nás!
+              </p>
+              <a
+                class="bg-black text-sm text-white hover:bg-blue focus:bg-blue rounded-lg uppercase px-8 py-2"
+                href="/"
+              >
+                Více info
+              </a>
+            </article>
+            <article
+              class="group flex flex-col items-center justify-between px-8 py-8 cursor-pointer bg-white hover:bg-gradientPurple focus:bg-gradientPurple"
+            >
+              <h2
+                class="text-black text-center text-2xl leading-7 tracking-wide mb-3.5 uppercase font-bold group-hover:text-white group-focus:text-white"
+              >
+                Marketingová strategie
+              </h2>
+              <p
+                class="text-base text-center text-black leading-7 tracking-wide mb-6 group-hover:text-white group-focus:text-white"
+              >
+                Na základě dat a výzkum u vytvoříme strategii, která vás posune
+                dál – ať už při budování značky nebo zvyšování prodejů. Váš
+                úspěch začíná u nás!
+              </p>
+              <a
+                class="bg-black text-sm text-white hover:bg-blue focus:bg-blue rounded-lg uppercase px-8 py-2"
+                href="/"
+              >
+                Více info
+              </a>
+            </article>
+            <article
+              class="group flex flex-col items-center justify-between px-8 py-8 cursor-pointer bg-white hover:bg-gradientPurple focus:bg-gradientPurple"
+            >
+              <h2
+                class="text-black text-center text-2xl leading-7 tracking-wide mb-3.5 uppercase font-bold group-hover:text-white group-focus:text-white"
+              >
+                Marketingová strategie
+              </h2>
+              <p
+                class="text-base text-center text-black leading-7 tracking-wide mb-6 group-hover:text-white group-focus:text-white"
+              >
+                Na základě dat a výzkum u vytvoříme strategii, která vás posune
+                dál – ať už při budování značky nebo zvyšování prodejů. Váš
+                úspěch začíná u nás!
+              </p>
+              <a
+                class="bg-black text-sm text-white hover:bg-blue focus:bg-blue rounded-lg uppercase px-8 py-2"
+                href="/"
+              >
+                Více info
+              </a>
+            </article>
+            <article
+              class="group flex flex-col items-center justify-between px-8 py-8 cursor-pointer bg-white hover:bg-gradientPurple focus:bg-gradientPurple"
+            >
+              <h2
+                class="text-black text-center text-2xl leading-7 tracking-wide mb-3.5 uppercase font-bold group-hover:text-white group-focus:text-white"
+              >
+                Marketingová strategie
+              </h2>
+              <p
+                class="text-base text-center text-black leading-7 tracking-wide mb-6 group-hover:text-white group-focus:text-white"
+              >
+                Na základě dat a výzkum u vytvoříme strategii, která vás posune
+                dál – ať už při budování značky nebo zvyšování prodejů. Váš
+                úspěch začíná u nás!
+              </p>
+              <a
+                class="bg-black text-sm text-white hover:bg-blue focus:bg-blue rounded-lg uppercase px-8 py-2"
+                href="/"
+              >
+                Více info
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+     <section>
+      <div class="container">
+        <div class="elfsight-app-3a4be76e-c374-42e5-8109-96cf9d1e06ef"></div>
+
+      </div>
+
+    </section>
+      <section class="max-lg:pb-8 max-lg:pt-8 pb-36 pt-28">
+        <div class="container">
+          <div class="flex justify-center items-center text-center flex-col">
+            <p
+              class="text-1xl font-bold leading-7 max-sm:leading-5 text-grey tracking-wide mb-5"
+            >
+              Pojďme společně vytvořit něco jedinečného.
+            </p>
+            <h2
+              class="text-4xl max-sm:text-2xl font-bold leading-7 text-grey tracking-wide mb-1"
+            >
+              Těšíme se na další úspěšnou spolupráci.
+            </h2>
+            <span
+              class="text-md font-bold max-sm:leading-5 leading-7 text-grey tracking-wide mb-9"
+            >
+              Dejte nám vědět, s čím vám můžeme pomoci!
+            </span>
+            <a
+              class="bg-darkGrey uppercase leading-7 tracking-wide text-white hover:bg-blue hover:text-white focus:bg-blue focus:text-white max-lg:px-4 max-lg:py-2 px-8 py-4 rounded-lg"
+              href="/"
+            >
+              Kontaktovat
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-sm:pb-3.5 pb-20">
+        <div class="container">
+          <div class="flex max-lg:block gap-5">
+            <div
+              class="max-lg:w-full w-1/2 flex items-start justify-center flex-col"
+            >
+              <h2
+                class="max-sm:text-2xl text-5xl font-black tracking-wide text-black leading-tight mb-5"
+              >
+                Convert Your Content
+                <br />
+                to Experience
+              </h2>
+              <p class="leading-7 tracking-wide text-black text-xl0">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also
+              </p>
+              <a
+                class="text-white bg-gradientBlue inline-block leading-7 text-1xl font-bold tracking-wide max-lg:px-4 max-lg:py-2 px-8 py-4 rounded-full mt-5 mb-3"
+                href="/"
+              >
+                Create Flipbook for Free →
+              </a>
+              <span class="block text-lightGrey max-lg:mb-5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+              </span>
+            </div>
+            <div
+              class="max-lg:w-full w-1/2 grid grid-flow-row auto-rows-min grid-cols-3 gap-5"
+            >
+              <div class="flex justify-center items-center">
+                <img src="https://placehold.co/218x300" alt="Kniha" />
+              </div>
+              <div class="flex justify-center items-center">
+                <img src="https://placehold.co/218x300" alt="Kniha" />
+              </div>
+              <div class="flex justify-center items-center">
+                <img src="https://placehold.co/218x300" alt="Kniha" />
+              </div>
+              <div class="flex justify-center items-center">
+                <img src="https://placehold.co/218x300" alt="Kniha" />
+              </div>
+              <div class="flex justify-center items-center">
+                <img src="https://placehold.co/218x300" alt="Kniha" />
+              </div>
+              <div class="flex justify-center items-center">
+                <img src="https://placehold.co/218x300" alt="Kniha" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-lg:pb-5 pb-36">
+        <div class="container">
+          <div class="max-w-850">
+            <h2 class="text-center mb-5 text-6xl font-black text-black">
+              FAQ's
+            </h2>
+            <div id="accordion">
+              <div class="accordion-toggle">
+                <div class="button"></div>
+                <h2 class="text-0xl text-darkGrey font-semibold">
+                  Lorem ipsum dolor
+                </h2>
+              </div>
+              <div class="accordion-content regular-text">
+                <ul class="mb-5 pl-8">
+                  <li class="square relative">
+                    <span
+                      class="mb-5 block text-0xl text-darkGrey font-semibold"
+                    >
+                      What is functon of your products?
+                    </span>
+                    <p class="text-base text-middleGrey font-normal">
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                      irure dolor in reprehenderit in voluptate velit esse
+                      cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                      occaecat cupidatat non proident, sunt in culpa qui officia
+                      deserunt mollit anim id est laborum.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="accordion-toggle">
+                <div class="button"></div>
+                <h2 class="text-0xl text-darkGrey font-semibold">
+                  Lorem ipsum dolor
+                </h2>
+              </div>
+              <div class="accordion-content regular-text">
+                <ul class="mb-5 pl-8">
+                  <li class="square relative">
+                    <span
+                      class="mb-5 block text-0xl text-darkGrey font-semibold"
+                    >
+                      What is functon of your products?
+                    </span>
+                    <p class="text-base text-middleGrey font-normal">
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                      irure dolor in reprehenderit in voluptate velit esse
+                      cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                      occaecat cupidatat non proident, sunt in culpa qui officia
+                      deserunt mollit anim id est laborum.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-white">
+      <div class="container">
+        <div class="pt-10 pb-16 max-lg:pb-5 flex max-lg:block gap-16">
+          <div class="max-lg:w-full w-2/5">
+            <h2 class="font-serif text-4xl leading-7 mb-3.5 tracking-wide">
+              Don't Miss Out
+            </h2>
+            <p class="text-md text-footerGrey mb-5 tracking-wide">
+              Sign up lorem ipsum lorem ipsum lorem ipsum
+            </p>
+
+            <form>
+              <div class="flex max-sm:block gap-5 mb-5">
+                <div class="flex flex-col max-lg:w-full w-full">
+                  <label
+                    class="uppercase text-xs tracking-wider leading-7"
+                    for="email"
+                  >
+                    Email Adress*
+                  </label>
+                  <input
+                    class="w-full h-12 pl-3.5 pr-3.5 text-middleGrey"
+                    id="email"
+                    type="email"
+                    placeholder="Email"
+                  />
+                </div>
+
+              </div>
+              <div>
+                <button
+                  class="hover:bg-blue hover:border-blue focus:border-blue hover:text-white focus:bg-blue focus:text-white w-full flex justify-center text-center items-center h-12 p-3.5 border mb-5 uppercase"
+                  type="submit"
+                >
+                  Sign up
+                </button>
+              </div>
+            </form>
+            <p class="text-xs text-footerGrey mb-3">
+              Sign up lorem ipsum lorem ipsum lorem ipsum
+              <a class="underline hover:text-blue focus:text-blue" href="/">
+                Privacy Policy
+              </a>
+              and
+              <a class="underline hover:text-blue focus:text-blue" href="/">
+                Terms of use
+              </a>
+            </p>
+
+            <span class="text-xs text-footerGrey mb-3.5">
+              *Required information
+            </span>
+
+            <div class="mt-5 flex gap-3.5 max-lg:mb-8">
+              <a href="/">
+                <i
+                  class="fa wp-icon fa-instagram border hover:bg-blue fa-lg"
+                ></i>
+              </a>
+              <a href="/">
+                <i
+                  class="fa wp-icon fa-facebook-f border hover:bg-blue fa-lg"
+                ></i>
+              </a>
+              <a href="/">
+                <i class="fa wp-icon fa-youtube border hover:bg-blue fa-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="max-lg:w-full w-3/5 text-white flex gap-8 max-lg:flex-col"
+          >
+            <div class="max-lg:w-full w-1/3 max-lg:text-center">
+              <h2
+                class="text-white font-normal tracking-widest leading-7 uppercase text-xl0 mb-5"
+              >
+                Company
+              </h2>
+              <ul class="text-footerGrey leading-7 tracking-wider max-lg:mb-5">
+                <li>
+                  <a class="hover:text-blue focus:text-blue" href="/">
+                    Položka menu
+                  </a>
+                </li>
+                <li>
+                  <a class="hover:text-blue focus:text-blue" href="/">
+                    Položka menu
+                  </a>
+                </li>
+                <li>
+                  <a class="hover:text-blue focus:text-blue" href="/">
+                    Položka menu
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="max-lg:w-full w-1/3 max-lg:text-center">
+              <h2
+                class="text-white font-normal tracking-widest leading-7 uppercase text-xl0 mb-5"
+              >
+                Customer Service
+              </h2>
+              <ul class="text-footerGrey leading-7 tracking-wider max-lg:mb-5">
+                <li>
+                  <a class="hover:text-blue focus:text-blue" href="/">
+                    Položka menu
+                  </a>
+                </li>
+                <li>
+                  <a class="hover:text-blue focus:text-blue" href="/">
+                    Položka menu
+                  </a>
+                </li>
+                <li>
+                  <a class="hover:text-blue focus:text-blue" href="/">
+                    Položka menu
+                  </a>
+                </li>
+                <li>
+                  <a class="hover:text-blue focus:text-blue" href="/">
+                    Položka menu
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="max-lg:w-full w-1/3 max-lg:text-center">
+              <h2
+                class="text-white font-normal tracking-widest leading-7 uppercase text-xl0 mb-5"
+              >
+                More to Explore
+              </h2>
+              <ul class="text-footerGrey leading-7 tracking-wider max-lg:mb-5">
+                <li>
+                  <a class="hover:text-blue focus:text-blue" href="/">
+                    Položka menu
+                  </a>
+                </li>
+                <li>
+                  <a class="hover:text-blue focus:text-blue" href="/">
+                    Položka menu
+                  </a>
+                </li>
+                <li>
+                  <a class="hover:text-blue focus:text-blue" href="/">
+                    Položka menu
+                  </a>
+                </li>
+                <li>
+                  <a class="hover:text-blue focus:text-blue" href="/">
+                    Položka menu
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <section
+      class="bg-black text-footerGrey border-t-white border-b-footerGrey border-y"
+    >
+      <div class="container">
+        <div class="flex justify-between max-lg:justify-center max-lg:block">
+          <div class="max-lg:mb-5">
+            <ul
+              class="uppercase flex items-center gap-3.5 max-lg:block text-center"
+            >
+              <li>
+                <a class="hover:text-blue focus:text-blue" href="/">Site Map</a>
+              </li>
+              <li>
+                <a class="hover:text-blue focus:text-blue" href="/">Privacy</a>
+              </li>
+              <li>
+                <a class="hover:text-blue focus:text-blue" href="/">Terms</a>
+              </li>
+              <li>
+                <a class="hover:text-blue focus:text-blue" href="/">
+                  User content permision terms
+                </a>
+              </li>
+              <li>
+                <a class="hover:text-blue focus:text-blue" href="/">
+                  Makeup.com
+                </a>
+              </li>
+              <li>
+                <a class="hover:text-blue focus:text-blue" href="/">
+                  Skincare.com
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex gap-3.5 items-center max-lg:justify-center">
+            <span>© Loreal Paris</span>
+            <button
+              class="uppercase text-white font-bold flex items-center gap-1 justify-center"
+              data-action="gotop"
+            >
+              Back to top
+              <span><i class="fa fa-chevron-up"></i></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black pt-1 pb-1">
+      <div class="container">
+        <p class="text-xs text-footerGrey text-center">
+          Sign up lorem ipsum lorem ipsum lorem ipsum
+          <a class="underline hover:text-blue focus:text-blue" href="/">
+            Privacy Policy
+          </a>
+          and
+          <a class="underline hover:text-blue focus:text-blue" href="/">
+            Terms of use
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <button class="btn"><i class="fa fa-chevron-up"></i></button>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans text-md;
+  background-color: white;
+  background-image: url("../img/smouha.jpg"), url("../img/smouha.jpg"),
+    url("../img/smouha.jpg"), url("../img/smouha.jpg"), url("../img/smouha.jpg"), url("../img/smouha.jpg"), url("../img/smouha.jpg"), url("../img/smouha.jpg");
+  background-size: 600px 220px;
+  background-repeat: no-repeat;
+  background-position: right 920px, left 1400px, right 1900px, center 2400px,
+    center 2970px, left 3400px, right 3900px, left 4350px;
+}
+
+.h-screen-90 {
+  @apply h-[90vh];
+}
+
+.container-cover {
+  @apply max-w-[1700px] xl:px-10 px-4 py-4 ml-auto mr-auto w-full flex max-lg:block h-full items-center;
+}
+
+.container-menu {
+  @apply max-w-[1600px]  ml-auto mr-auto flex flex-wrap items-center justify-around gap-4 w-full;
+}
+
+.container {
+  @apply max-w-[1365px] px-4 py-4 ml-auto mr-auto w-full;
+}
+
+.pikora {
+  @apply max-lg:right-[0px] right-[150px] max-lg:bottom-[180px] bottom-[-50px] max-sm:bottom-[202px];
+}
+
+.pikoraImg {
+  @apply max-lg:max-w-[300px] max-w-[450px];
+}
+
+.min-w-300 {
+  @apply max-lg:min-w-[300px];
+}
+.max-w-850 {
+  @apply max-w-[850px] mr-auto ml-auto;
+}
+
+#accordion {
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.accordion-toggle {
+  cursor: pointer;
+  padding: 2rem 1rem 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 35px;
+  border: 2px solid #ddd;
+  transition: 250ms all ease;
+  line-height: 1;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  height: 100px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  background-color: #f9f9f9;
+}
+.accordion-toggle .button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-left: 30px;
+}
+.accordion-toggle .button:before,
+.accordion-toggle .button:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  transition: transform 0.25s ease-out;
+}
+
+.square:before {
+  content: "";
+  position: absolute;
+  background-color: #ff7c7d;
+  transition: transform 0.25s ease-out;
+  width: 30px;
+  height: 4px;
+  top: 11px;
+  left: -48px;
+  margin-top: -1px;
+}
+.accordion-toggle .button:before {
+  top: 0;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  margin-left: -1px;
+}
+.accordion-toggle .button:after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  margin-top: -1px;
+}
+.accordion-toggle.opened {
+  color: black;
+  border-color: #ddd;
+  background-color: #f9f9f9;
+}
+.accordion-toggle.opened:hover {
+  background-color: #f9f9f9;
+}
+.accordion-toggle.opened .button {
+  cursor: pointer;
+}
+.accordion-toggle.opened .button:before {
+  transform: rotate(90deg);
+}
+.accordion-toggle.opened .button:after {
+  transform: rotate(180deg);
+}
+.accordion-toggle.opened .button:before,
+.accordion-toggle.opened .button:after {
+  background-color: black;
+}
+.accordion-toggle div {
+  display: inline-block;
+  font-weight: 400;
+}
+
+.accordion-content {
+  background: white;
+  display: none;
+  margin-bottom: 3rem;
+  border: 2px solid #ddd;
+  border-top: 2px solid transparent;
+  padding: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border-radius: 15px;
+}
+
+.wp-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  vertical-align: middle;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.hkJfHh {
+  background-color: transparent !important;
+}
+.jhGZeV {
+  background-color: #0131fe !important;
+}
+
+.hidden-import {
+  display: none !important;
+}
+
+.yWePr {
+
+  color: transparent !important;
+
+
+}
+
+.btn {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(12, 12, 12);
+  color: white;
+  border: none;
+  padding-bottom:5px;
+
+}
+
