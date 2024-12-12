@@ -80,23 +80,7 @@ const mySwiper = new Swiper('.swiper', {
   });
 
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const goTopButton = document.querySelector('[data-action="gotop"]');
-    const windowViewPortHeight = window.innerHeight; // browser viewport height
-    let isRequestingAnimationFrame = false;
-
-    if (!goTopButton) {
-      return;
-    }
-
-    goTopButton.addEventListener('click', function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-
-  });
+ 
   document.addEventListener('DOMContentLoaded', function() {
     const observer = new MutationObserver(() => {
       setTimeout(() => {
@@ -136,7 +120,7 @@ const scrollToTop = () => {
       left: 0,
       behavior: 'smooth'
     });
-    
+
   });
 };
 

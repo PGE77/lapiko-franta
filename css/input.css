@@ -49,7 +49,7 @@ body {
 
 #accordion {
   width: 100%;
-  padding-top: 1rem;
+
 }
 
 .accordion-toggle {
@@ -62,12 +62,12 @@ body {
   border: 2px solid #ddd;
   transition: 250ms all ease;
   line-height: 1;
-  margin-bottom: 25px;
   border-radius: 15px;
   height: 100px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   background-color: #f9f9f9;
+  margin-top:25px;
 }
 .accordion-toggle .button {
   position: relative;
@@ -127,7 +127,7 @@ body {
 }
 .accordion-toggle.opened .button:before,
 .accordion-toggle.opened .button:after {
-  background-color: black;
+  background-color: #ff7c7d;
 }
 .accordion-toggle div {
   display: inline-block;
@@ -144,6 +144,29 @@ body {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   border-radius: 15px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+
+}
+
+@media screen and (max-width:768px){
+
+.accordion-content{
+padding:1rem;
+
+
+}
+
+}
+
+
+.accordion-toggle.opened
+ {
+
+ border-bottom-left-radius: 0px;
+ border-bottom-right-radius: 0px;
+ border-bottom: 2px solid transparent;
+
 }
 
 .wp-icon {
